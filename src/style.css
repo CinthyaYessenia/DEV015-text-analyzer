@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Harabara;
+    src: url(Harabara\ Mais\ Demo.otf);
+}
+
+@font-face {
+    font-family: Aesthetic;
+    src: url(Aesthetic\ Romance.ttf);
+}
+
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+#nav{
+    
+    box-shadow: 0px 1px 0 white;
+}
+
+img{
+    margin: 10px 0 10px 40px;
+    max-width: 100px;
+}
+
+video {
+    width: auto;
+    height: auto;
+  }
+
+header{
+    font-family: Aesthetic;
+    font-size: 65px;
+    font-style: normal;
+    text-align: right;
+    box-shadow: 1310px 8px 0 white;
+}
+
+h1{
+    
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 158px;
+    font-weight: normal;
+    text-shadow: 2px 1px 5px black;
+    letter-spacing: 4px;
+}
+
+#flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px 0 100px;
+}
+
+#flex2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: Harabara;
+    font-weight: normal;
+    margin-block-end: 0em;
+}
+   
+
+#background-video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+textarea, button {
+    color: white;
+    background: rgba(255, 255, 255, 0.4); /* Fondo semi-transparente para mayor legibilidad */
+    border: none;
+    border-radius: 10px;
+}
+
+textarea[name="user-input"]{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 30px 0;
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+#reset-button{
+    font-family: Harabara;
+    font-size: 20px;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.item{
+    font-size: 22px;
+    font-family: Harabara;
+    font-style: normal;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.192);
+    border: 1px solid rgb(63, 100, 56, 0.05);
+    padding: 8px 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+footer{
+    width: 100%;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    background-color: rgba(255, 255, 255, 0.192);
+    position: fixed;
+    bottom:0px;
+    
+}
+
+p{
+    padding: 0px 0 0px 40px;
+}

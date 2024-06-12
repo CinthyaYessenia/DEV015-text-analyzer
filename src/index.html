@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <title>Analizador de texto</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analizador de Texto</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <script src="index.js" type="module"></script>
+  <div id="nav">
+    <img src="Images/logo.svg" alt="logo">
+  </div>
+
+  <video autoplay muted loop id="background-video">
+    <source src="Images/BackgroundComprimidoFinal.mp4" type="video/mp4">
+  </video>
+  <header>
+    <h1>IDENTIFICADOR</h1>
+  </header>
+  <div id="flex">
+
+    <div id="flex2">
+      <h2>¡Analicemos tu texto!</h2>
+      <textarea name="user-input" placeholder="Escribe aquí" rows="10" cols="50"></textarea>
+      <button id="reset-button">REINICIAR</button>
+    </div>
+
+
+
+    <ul>
+      <li class="item" data-testid="word-count">Recuento de palabras: </li>
+      <li class="item" data-testid="character-count">Recuento de caracteres: </li>
+      <li class="item" data-testid="character-no-spaces-count">Recuento de caracteres excluyendo espacios y signos de
+        puntuación:</li>
+      <li class="item" data-testid="number-count">Recuento de números: </li>
+      <li class="item" data-testid="number-sum">Suma total de números: </li>
+      <li class="item" data-testid="word-length-average">Longitud media de las palabras: </li>
+    </ul>
+  </div>
+
+  <script type="module" src="./index.js"></script>
 </body>
+
+<footer>
+  <p>Desarrollado por Cinthya Yessenia Flores Vidaurre</p>
+</footer>
+
 </html>

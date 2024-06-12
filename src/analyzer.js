@@ -1,21 +1,62 @@
-const analyzer = {  
+const analyzer = {
   getWordCount: (text) => {
-    //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    if (text === '') {
+      return 0;
+    }
+
+    const texto = text.trim().split(/\s+/).length; //Quita los espacios del inicio y del final. Split (como tijera)
+
+    return texto // Retornar la cantidad de palabras ingresadas por el usuario
+
   },
   getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    if (text === '') {
+      return 0;
+    }
+    return text.length
+
+
   },
   getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    if (text === '') {
+      return 0;
+    }
+    const caracterSinEspacio = text.replace(/[\s.,/#!$%^&*;:{}=\-_~()]/g, '').length
+
+    return caracterSinEspacio
   },
-  getAverageWordLength: (text) => {    
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+
+  getAverageWordLength: (text) => {
+    if (text === '') {
+      return 0;
+    }
+    const array = text.trim().split(' ');
+    let contador = 0
+
+    for (let i = 0; i < array.length; i++) {
+      // n += i;
+      contador = contador + array[i].length
+    }
+    const convertir = contador / array.length
+    return Number(convertir.toFixed(2))
   },
+
   getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    if (text === '') {
+      return 0;
+    }
+    const numero = text.match(/(?<!\w)\d+(\.\d+)?(?!\w)/g)
+    return numero ? numero.length : 0;
   },
   getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    if (text === '') {
+      return 0;
+    }
+    const suma = text.match(/(?<!\w)\d+(\.\d+)?(?!\w)/g)
+    if (suma === null) {
+      return 0;
+    }
+    return suma.reduce((anterior, actual) => anterior + parseFloat(actual), 0);
   },
 };
 
