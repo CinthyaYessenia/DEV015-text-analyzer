@@ -18,7 +18,7 @@ buttonReset.addEventListener("click", function () {
   textarea.value = "";
   palabras.innerHTML = "Recuento de palabras: ";
   caracteres.innerHTML = "Recuento de caracteres: ";
-  caracteresExcluyendo.innerHTML = "Recuento de caracteres excluyendo espacios y signos de puntuación: ";
+  caracteresExcluyendo.innerHTML = "Caracteres sin espacios ni signos: ";
   números.innerHTML = "Recuento de números: ";
   Suma.innerHTML = "Suma total de números: ";
   longitud.innerHTML = "Longitud media de las palabras: ";
@@ -31,7 +31,7 @@ textarea.addEventListener("input", function () {
   //textarea.value = "";
   palabras.innerHTML = "Recuento de palabras: " + analyzer.getWordCount(textarea.value);
   caracteres.innerHTML = "Recuento de caracteres: " + analyzer.getCharacterCount(textarea.value);
-  caracteresExcluyendo.innerHTML = "Recuento de caracteres excluyendo espacios y signos de puntuación: " + analyzer.getCharacterCountExcludingSpaces(textarea.value);
+  caracteresExcluyendo.innerHTML = "Caracteres sin espacios ni signos: " + analyzer.getCharacterCountExcludingSpaces(textarea.value);
   números.innerHTML = "Recuento de números: " + analyzer.getNumberCount(textarea.value);
   Suma.innerHTML = "Suma total de números: " + analyzer.getNumberSum(textarea.value);
   longitud.innerHTML = "Longitud media de las palabras: " + analyzer.getAverageWordLength(textarea.value);
